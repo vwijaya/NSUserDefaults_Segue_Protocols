@@ -21,6 +21,8 @@
 		09B52DC9196276D200B72A21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B52DAB196276D200B72A21 /* UIKit.framework */; };
 		09B52DD1196276D200B72A21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09B52DCF196276D200B72A21 /* InfoPlist.strings */; };
 		09B52DD3196276D200B72A21 /* NSUserDefaults_Seques_Protocols_ChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B52DD2196276D200B72A21 /* NSUserDefaults_Seques_Protocols_ChallengeTests.m */; };
+		09B52DDE19628B6A00B72A21 /* VWSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B52DDD19628B6A00B72A21 /* VWSignInViewController.m */; };
+		09B52DE119628B9600B72A21 /* VWCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B52DE019628B9600B72A21 /* VWCreateAccountViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		09B52DCE196276D200B72A21 /* NSUserDefaults,Seques,Protocols ChallengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSUserDefaults,Seques,Protocols ChallengeTests-Info.plist"; sourceTree = "<group>"; };
 		09B52DD0196276D200B72A21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		09B52DD2196276D200B72A21 /* NSUserDefaults_Seques_Protocols_ChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaults_Seques_Protocols_ChallengeTests.m; sourceTree = "<group>"; };
+		09B52DDC19628B6A00B72A21 /* VWSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWSignInViewController.h; sourceTree = "<group>"; };
+		09B52DDD19628B6A00B72A21 /* VWSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWSignInViewController.m; sourceTree = "<group>"; };
+		09B52DDF19628B9600B72A21 /* VWCreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWCreateAccountViewController.h; sourceTree = "<group>"; };
+		09B52DE019628B9600B72A21 /* VWCreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWCreateAccountViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,10 @@
 				09B52DB6196276D200B72A21 /* VWAppDelegate.h */,
 				09B52DB7196276D200B72A21 /* VWAppDelegate.m */,
 				09B52DB9196276D200B72A21 /* Main.storyboard */,
+				09B52DDF19628B9600B72A21 /* VWCreateAccountViewController.h */,
+				09B52DE019628B9600B72A21 /* VWCreateAccountViewController.m */,
+				09B52DDC19628B6A00B72A21 /* VWSignInViewController.h */,
+				09B52DDD19628B6A00B72A21 /* VWSignInViewController.m */,
 				09B52DBC196276D200B72A21 /* VWViewController.h */,
 				09B52DBD196276D200B72A21 /* VWViewController.m */,
 				09B52DBF196276D200B72A21 /* Images.xcassets */,
@@ -252,7 +262,9 @@
 			files = (
 				09B52DBE196276D200B72A21 /* VWViewController.m in Sources */,
 				09B52DB4196276D200B72A21 /* main.m in Sources */,
+				09B52DE119628B9600B72A21 /* VWCreateAccountViewController.m in Sources */,
 				09B52DB8196276D200B72A21 /* VWAppDelegate.m in Sources */,
+				09B52DDE19628B6A00B72A21 /* VWSignInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
