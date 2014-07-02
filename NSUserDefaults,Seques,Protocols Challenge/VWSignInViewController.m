@@ -35,6 +35,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.destinationViewController isKindOfClass:[VWCreateAccountViewController class]])
+    {
+        VWCreateAccountViewController *createAccountVC = segue.destinationViewController;
+        createAccountVC.delegate = self;
+    }
+}
+
 /*
 #pragma mark - Navigation
 
@@ -53,4 +62,16 @@
 - (IBAction)loginButtonPressed:(UIButton *)sender {
     [self performSegueWithIdentifier:@"toViewControllerSegue" sender:sender];
 }
+
+#pragma mark - VWCreateAccountViewControllerDelegate
+-(void)didCancel
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)didCreateAccount
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
