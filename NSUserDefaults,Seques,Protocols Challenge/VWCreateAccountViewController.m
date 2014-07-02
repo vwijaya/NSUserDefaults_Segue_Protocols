@@ -47,7 +47,41 @@
 */
 
 - (IBAction)createAccountButtonPressed:(UIButton *)sender {
-    [self.delegate didCreateAccount];
+    
+    // Validating user inputs
+    if((self.usernameTextField.text.length != 0) &&
+       (self.passwordTextField.text.length != 0) &&
+       //BAD: (self.passwordTextField.text == self.confirmPasswordTextField.text)
+       [self.passwordTextField.text isEqualToString:self.confirmPasswordTextField.text]
+        )
+    {
+        // Persisting information
+        [[NSUserDefaults standardUserDefaults] setObject:self.usernameTextField.text forKey:USER_NAME];
+        [[NSUserDefaults standardUserDefaults] setObject:self.passwordTextField.text forKey:USER_PASSWORD];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        [self.delegate didCreateAccount];
+        
+        //NSLog(@"Username %@", self.usernameTextField.text);
+        //NSLog(@"Password %i %@", self.passwordTextField.text.length, self.passwordTextField.text);
+        //NSLog(@"Confirmed %i %@", self.confirmPasswordTextField.text.length, self.confirmPasswordTextField.text);
+        
+        //UIAlertView *alertView = [[UIAlertView alloc]
+        //                          initWithTitle:@"Check" message:@"Good"
+        //                          delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        //[alertView show];
+    } else {
+        //NSLog(@"Username %@", self.usernameTextField.text);
+        //NSLog(@"Password %i %@", self.passwordTextField.text.length, self.passwordTextField.text);
+        //NSLog(@"Confirmed %i %@", self.confirmPasswordTextField.text.length, self.confirmPasswordTextField.text);
+        
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Error" message:@"Information not entered correctly"
+                                  delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    }
+    
+
 }
 
 - (IBAction)cancelButtonPressed:(UIButton *)sender {
